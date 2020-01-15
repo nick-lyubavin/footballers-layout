@@ -47,9 +47,6 @@ body {
 .header1__container {
   position: relative;
   z-index: 1;
-
-  padding-top: 33px;
-  padding-bottom: 84px;
 }
 
 .header1__logo__container {
@@ -81,6 +78,11 @@ h1 {
 }
 
 @media (max-width: 640px) {
+  .header1__container {
+    padding-top: 39px;
+    padding-bottom: 84px;
+  }
+
   .header1__text__part1 {
     padding-top: 108px;
   }
@@ -99,7 +101,7 @@ h1 {
 
 @media (min-width: 641px) and (max-width: 960px) {
   .header1__container {
-    padding-top: 38px;
+    padding-top: 39px;
   }
 
   .header1__logo__container {
@@ -113,7 +115,7 @@ h1 {
 
   .header1__text__part1 {
     padding-left: 4rem;
-    padding-top: 120px;
+    padding-top: 118px;
   }
 
   .header1__text__part2 {
@@ -127,29 +129,12 @@ h1 {
 .button {
   display: flex;
 
-  background-color: #5e42b0;  
+  background-color: #5e42b0;
   color: #fff;
 }
 
-
-
 .button_content {
   display: flex;
-}
-
-.download-block {
-  padding-left: 8px;
-  font-size: 8px;
-}
-
-
-
-.button__appstore {
-  /*margin-top: 82px;*/
-}
-
-.button__google {
-  background-repeat: no-repeat;
 }
 
 @media (max-width: 640px) {
@@ -169,6 +154,18 @@ h1 {
     width: 22px;
   }
 
+  .download-block {
+    padding-left: 8px;
+    font-size: 8px;
+  }
+
+  .button__appstore {
+  }
+
+  .button__google {
+    padding-left: 20px;
+  }
+
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -177,28 +174,45 @@ h1 {
 
     padding-left: 56px;
     padding-right: 56px;
+
     display: flex;
     justify-content: space-between;
+
+    padding-bottom: 90px;
   }
 
   .button {
     padding-top: 15px;
     padding-bottom: 18px;
-    padding-left: 37px;
-
-    width: 270px;
     border-radius: 40px;
+  }
+
+  .button__appstore {
+    padding-left: 37px;
+    width: 275px;
+  }
+
+  .button__google {
+    padding-left: 55px;
+    width: 256px;
   }
 
   .apple-google-logo {
     width: 45px;
   }
 
+  .download-block {
+    padding-left: 22px;
+    padding-top: 5px;
+
+    font-size: 14px;
+  }
+
 }
 
 
 
-/*-------------------------------------------*/
+/*----------------ATHLETES------------------*/
 
 .content {
   padding-top: 10px;
@@ -221,7 +235,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: contain;
 
-  padding-bottom: 100%;
+  display: block;
 }
 
 .enum {
@@ -242,6 +256,43 @@ h1 {
   left: 0;
 }
 
+@media (max-width: 640px) {
+  .header2 {
+    font-size: 50px;
+  }
+
+  .image1 {
+    padding-bottom: 100%;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .header2 {
+    font-size: 80px;
+    color: #777;
+
+
+    padding-left: 30%;
+    position: relative;
+  }
+
+  .image1 {
+    position: absolute;
+    left: -360px;
+    top: 10px;
+    /* width: 300px; */
+    height: 700px;
+    width: 100%;
+
+    z-index: 1;
+  }
+
+
+}
+
+
+/* ------------------------------- */
 .header3 {
   font-size: 23px;
   color: #c1c1c1;
@@ -614,7 +665,7 @@ h2.header2_part2 {
   }
 
   body::after {
-    content: url(sources/surface_768.jpg);
+    /* content: url(sources/surface_768.jpg); */
 
     position: absolute;
     top: 0;
