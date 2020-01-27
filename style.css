@@ -218,16 +218,25 @@ h1 {
   padding-top: 10px;
 }
 
-.content-padding {
+/* .content-padding {
   padding-left: 6.25%;
   padding-right: 6.25%;
-}
+} */
 
-.header2 {
+.header2-athletes {
   font-size: 50px;
   color: #e7e7e7;
 
   margin: 0;
+}
+
+.h3__text {
+  /* font-size: 15px; */
+  line-height: 18px;
+  margin: 0;
+
+  padding-top: 17px;
+  letter-spacing: 1px;
 }
 
 .image1 {
@@ -265,6 +274,10 @@ h1 {
     padding-bottom: 100%;
   }
 
+  .h3__text {
+    font-size: 15px;
+  }
+
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -273,13 +286,17 @@ h1 {
     color: #777;
 
 
-    padding-left: 30%;
+    /* padding-left: 30%; */
     position: relative;
+  }
+
+  .athletes-padding {
+    padding-left: 286px;
   }
 
   .image1 {
     position: absolute;
-    left: -360px;
+    left: -43%;
     top: 10px;
     /* width: 300px; */
     height: 700px;
@@ -288,27 +305,32 @@ h1 {
     z-index: 1;
   }
 
+  .header3 {
+    font-size: 32px;
+  }
 
+  .h3__text {
+    font-size: 16px;
+  }
 }
 
 
-/* ------------------------------- */
+/* -------------PLAYERS------ */
+
+/* .header2 {
+  color: #e7e7e7;
+  margin: 0;
+}
+
 .header3 {
   font-size: 23px;
   color: #c1c1c1;
 
   padding-left: 1px;
   margin: 0;
-}
+} */
 
-.h3__text {
-  font-size: 15px;
-  line-height: 18px;
-  margin: 0;
 
-  padding-top: 17px;
-  letter-spacing: 1px;
-}
 
 .header3__part1 {
   padding-top: 22px;
@@ -338,6 +360,59 @@ p.h3__text__part3 {
 /* Как вообще номально верстать Pixel perfect, если не подбирать значения высот?*/
 }
 
+@media (max-width: 640px) {
+  .header2 {
+    font-size: 50px;
+  }
+
+  .h2_subtext {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+
+    padding-top: 13px;
+
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .header2 {
+    font-size: 80px;
+    color: #777;
+
+
+    /* padding-left: 30%; */
+    position: relative;
+  }
+
+  .players-padding {
+    padding-left: 30px;
+    padding-right: 307px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    /* width: 300px; */
+    height: 100px;
+    width: 100%;
+
+    z-index: 1;
+  }
+
+  .h2_subtext {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+
+    padding-top: 13px;
+
+    letter-spacing: 2px;
+  }
+}
+
 .header3__part4 {
   padding-top: 54px;
 }
@@ -355,15 +430,7 @@ p.h3__text__part3 {
   color: #fff;
 }
 
-.h3_part2__text {
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0;
 
-  padding-top: 13px;
-
-  letter-spacing: 2px;
-}
 
 /* Можно нумератор стилизовать как-то более оптимально? --( */
 .enum-magenta {
@@ -386,6 +453,11 @@ p.h3__text__part3 {
   left: 0;
 }
 
+/*-------------------- BE ACTIVE----------------*/
+
+.be-active-padding {
+  padding-left: 30px;
+}
 
 .image3 {
   background-position: center center;
@@ -398,35 +470,6 @@ p.h3__text__part3 {
 /* корректно ли сверстан элемент? Паддинги опять приходится подбирать */
 /* не знаю как сделать подчеркивание */
 
-.image3::after {
-  position: absolute;
-  background-color: #8765dd;
-  font-weight: 700;
-
-  content: "01";
-  color: #fff;
-  text-align: center;
-  vertical-align: center;
-
-  left: 6.25%;
-  top: 84%;
-  width: 21.875%;
-  padding-top: 6%;
-  padding-bottom: 8%;
-}
-
-h2.header2_part2 {
-  font-size: 28px;
-  padding-top: 24px;
-  color: #e7e7e7;
-
-  margin: 0;
-}
-
-.header3__part7 {
-  padding-top: 28px;
-}
-
 .image4 {
   background-position: center center;
   background-repeat: no-repeat;
@@ -436,23 +479,6 @@ h2.header2_part2 {
   position: relative;
 
   margin-top: 75px;
-}
-
-.image4::after {
-  position: absolute;
-  background-color: #8765dd;
-  font-weight: 700;
-
-  content: "02";
-  color: #fff;
-  text-align: center;
-  vertical-align: center;
-
-  left: 6.25%;
-  top: 85%;
-  width: 21.875%;
-  padding-top: 5.5%;
-  padding-bottom: 8%;
 }
 
 .image5 {
@@ -466,21 +492,145 @@ h2.header2_part2 {
   margin-top: 60px;
 }
 
-.image5::after {
-  position: absolute;
-  background-color: #8765dd;
-  font-weight: 700;
+h2.header2_part2 {
+  /* font-size: 28px; */
+  padding-top: 24px;
+  color: #e7e7e7;
 
-  content: "03";
-  color: #fff;
-  text-align: center;
-  vertical-align: center;
+  margin: 0;
+}
 
-  left: 6.25%;
-  top: 85%;
-  width: 21.875%;
-  padding-top: 5.5%;
-  padding-bottom: 8%;
+@media (max-width: 640px) {
+  .image3::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "01";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 84%;
+    width: 21.875%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image4::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "02";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 85%;
+    width: 21.875%;
+    padding-top: 5.5%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image5::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "03";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 85%;
+    width: 21.875%;
+    padding-top: 5.5%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .image3::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "01";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 87%;
+    width: 21.875%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image4::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "02";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 87%;
+    width: 21.875%;
+    padding-top: 5.5%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image5::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "03";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 6.25%;
+    top: 87%;
+    width: 21.875%;
+    padding-top: 5.5%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  h2.header2_part2 {
+    /* font-size: 28px; */
+    padding-top: 80px;
+    color: #e7e7e7;
+
+    margin: 0;
+  }
+}
+
+
+
+
+.header3__part7 {
+  padding-top: 28px;
 }
 
 /*--------------footer----------------------*/
@@ -518,21 +668,10 @@ h2.header2_part2 {
 
 .button__footer {
   display: flex;
-  width: 21.875%;
 
   background-color: #5e42b0;
-  border-radius: 15px;
+
   color: #fff;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-logo {
-  width: 55px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  fill: #fff;
 
   margin-left: auto;
   margin-right: auto;
@@ -576,7 +715,44 @@ h2.header2_part2 {
   padding-bottom: 10px;
 }
 
+@media (max-width: 640px) {
+  .button__footer {
+    width: 21.875%;
+    border-radius: 15px;
+  }
 
+  .footer-logo {
+    width: 55px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    fill: #fff;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .button__footer {
+    width: 130px;
+    border-radius: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer-logo {
+    width: 70px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    fill: #fff;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+ /* ----------IMAGES -------------------- */
 
 @media (max-width: 640px) {
 
