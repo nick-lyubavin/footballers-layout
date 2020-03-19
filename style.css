@@ -12,8 +12,7 @@ body {
 
 .href-decor {
   text-transform: uppercase;
-  text-decoration: none;
-  /*font-weight: 700;*/
+  text-decoration: none;  
   color: #000000;
 }
 
@@ -21,10 +20,14 @@ body {
   font-weight: 700;
 }
 
+h2, h3, h4, h5 {
+  margin: 0;
+}
+
+
 /*---------header_logo----------------*/
 
-.header1 {
- /* background-image: url("https://raw.githubusercontent.com/lubavin01/mq-diploma/master/sources/img/football_767.jpg");*/
+.header1 { 
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,199 +47,252 @@ body {
   opacity: 0.80;
 }
 
-.header1__container {
+
+/*---------header1-container----------------*/
+
+.header1-container {
   position: relative;
   z-index: 1;
 }
 
-.header1__logo__container {
+.header1-container__logo {
   margin-left:auto;
   margin-right:auto;
   fill: #ffffff;
 
   width: 130px;
 }
-/*---------header__content----------------*/
 
-h1 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header1_font-style {
+.header1-container__title {
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
-}
 
-.header1__text__part1 {
-  display: block;
-}
-
-.header1__text__part2 {
   display: block;
 }
 
 @media (max-width: 640px) {
-  .header1__container {
+  .header1-container {
     padding-top: 39px;
     padding-bottom: 84px;
   }
 
-  .header1__text__part1 {
+  .header1-container__title {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+  }
+
+  .header1-container__title:first-child {
     padding-top: 108px;
   }
 
-  .header1__text__part2 {
+  .header1-container__title:last-child {
     padding-top: 14px;
     padding-left: 40px;
     line-height: 2rem;
   }
-
-  h1 {
-    font-size: 1.75rem;
-    letter-spacing: 1px;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  .header1__container {
+  .header1-container {
     padding-top: 39px;
+    padding-bottom: 90px;
   }
 
-  .header1__logo__container {
-    width: 205px;
-  }
-
-  h1 {
+  .header1-container__title {
     font-size: 4rem;
     letter-spacing: 4px;
   }
 
-  .header1__text__part1 {
-    padding-left: 4rem;
+  .header1-container__title:first-child {
+    padding-left: 64px;
     padding-top: 118px;
   }
 
-  .header1__text__part2 {
+  .header1-container__title:last-child {
     padding-left: 170px;
     line-height: 75px;
   }
+
 }
+
+@media (min-width: 961px){
+  .header1-container {
+    padding-top: 45px;
+    padding-bottom: 90px;
+
+    padding-left: 11px;
+    padding-right: 13px;
+  }
+
+  .header1-container__title {
+    font-size: 90px;
+    letter-spacing: 4px;
+    line-height: 75px;
+  }
+
+  .header1-container__title:first-child {
+    padding-top: 195px;
+  }
+
+  .header1-container__title:last-child {
+    /* text-align: right; */
+    padding-left: 450px;
+  }
+}
+
 
 /*---------header buttons----------------*/
 
 .button {
-  display: flex;
+  display: block;
+  box-sizing: border-box;
 
   background-color: #5e42b0;
   color: #fff;
+
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.button_content {
+.button:hover {
+  background-color: #513a96;
+}
+
+.button__content {
   display: flex;
 }
 
 @media (max-width: 640px) {
-  .button_block {
+  .header1-container__buttons-wrap{
     margin-top: 82px;
+
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: 90px;
   }
 
   .button {
+    display: block;
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-left: 80px;
 
     border-radius: 20px;
-  }
-
-  .apple-google-logo {
-    width: 22px;
-  }
-
-  .download-block {
-    padding-left: 8px;
     font-size: 8px;
   }
 
-  .button__appstore {
+  .button:last-child{
+    margin-top: 15px;
   }
 
-  .button__google {
-    padding-left: 20px;
+  .button__content {
+    padding-left: 35%;
   }
 
+  .button__download {
+    padding-left: 8px;
+  }
+
+  .button__logo {
+    width: 30px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  .button_block {
-    margin-top: 298px;
+  .header1-container__buttons-wrap {
+    padding-top: 312px;
+    padding-bottom: 90px;
 
-    padding-left: 56px;
-    padding-right: 56px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 
     display: flex;
-    justify-content: space-between;
-
-    padding-bottom: 90px;
+    justify-content: center;
   }
 
   .button {
     padding-top: 15px;
     padding-bottom: 18px;
     border-radius: 40px;
+    font-size: 14px;
+
+    min-width: 45%;
   }
 
-  .button__appstore {
-    padding-left: 37px;
-    width: 275px;
+  .button:last-child{
+    margin-left: 30px;
   }
 
-  .button__google {
-    padding-left: 55px;
-    width: 256px;
+  .button__content {
+    padding-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .apple-google-logo {
-    width: 45px;
-  }
-
-  .download-block {
+  .button__download {
     padding-left: 22px;
     padding-top: 5px;
-
-    font-size: 14px;
   }
 
+  .button__logo {
+    width: 40px;
+  }
 }
 
+@media (min-width: 961px) {
+  .header1-container__buttons-wrap {
+    margin-top: 160px;
 
+    width: 43%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 110px;
+  }
+
+  .button {
+    padding-top: 15px;
+    padding-bottom: 18px;
+    border-radius: 40px;
+    font-size: 14px;
+
+    min-width: 310px;
+
+    padding-top: 15px;
+    padding-bottom: 18px;
+    border-radius: 40px;
+  }
+
+  .button:last-child{
+    margin-left: 30px;
+  }
+
+  .button__content {
+    padding-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button__download {
+    padding-left: 22px;
+    padding-top: 5px;
+  }
+
+  .button__logo {
+    width: 45px;
+  }
+}
 
 /*----------------ATHLETES------------------*/
 
-.content {
-  padding-top: 10px;
-}
-
-/* .content-padding {
-  padding-left: 6.25%;
-  padding-right: 6.25%;
-} */
-
-.header2-athletes {
-  font-size: 50px;
-  color: #e7e7e7;
-
-  margin: 0;
-}
-
-.h3__text {
-  /* font-size: 15px; */
-  line-height: 18px;
-  margin: 0;
-
-  padding-top: 17px;
-  letter-spacing: 1px;
+.relative {
+  position: relative;
 }
 
 .image1 {
@@ -248,7 +304,6 @@ h1 {
 }
 
 .enum {
-  font-size: 14px;
   vertical-align: top;
   position: relative;
 }
@@ -256,183 +311,15 @@ h1 {
 .enum::after {
   content: "";
   display: block;
-  width: 15px;
+  width: 25px;
   height: 3px;
-  background-color: #5e42b0;
+  background-color: #777;
 
   position: absolute;
   top: 100%;
   left: 0;
 }
 
-@media (max-width: 640px) {
-  .header2 {
-    font-size: 50px;
-  }
-
-  .image1 {
-    padding-bottom: 100%;
-  }
-
-  .h3__text {
-    font-size: 15px;
-  }
-
-}
-
-@media (min-width: 641px) and (max-width: 960px) {
-  .header2 {
-    font-size: 80px;
-    color: #777;
-
-
-    /* padding-left: 30%; */
-    position: relative;
-  }
-
-  .athletes-padding {
-    padding-left: 286px;
-  }
-
-  .image1 {
-    position: absolute;
-    left: -43%;
-    top: 10px;
-    /* width: 300px; */
-    height: 700px;
-    width: 100%;
-
-    z-index: 1;
-  }
-
-  .header3 {
-    font-size: 32px;
-  }
-
-  .h3__text {
-    font-size: 16px;
-  }
-}
-
-
-/* -------------PLAYERS------ */
-
-/* .header2 {
-  color: #e7e7e7;
-  margin: 0;
-}
-
-.header3 {
-  font-size: 23px;
-  color: #c1c1c1;
-
-  padding-left: 1px;
-  margin: 0;
-} */
-
-
-
-.header3__part1 {
-  padding-top: 22px;
-}
-
-.header3__part2 {
-  padding-top: 105px;
-  padding-bottom: 53px;
-}
-
-.header3__part3 {
-  padding-top: 54px;
-  padding-bottom: 55px;
-  background-color: #5e42b0;
-}
-
-p.h3__text__part3 {
-  color: #ffffff;
-}
-
-.image2 {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  padding-bottom: 80%;
-/* Как вообще номально верстать Pixel perfect, если не подбирать значения высот?*/
-}
-
-@media (max-width: 640px) {
-  .header2 {
-    font-size: 50px;
-  }
-
-  .h2_subtext {
-    font-size: 16px;
-    line-height: 20px;
-    margin: 0;
-
-    padding-top: 13px;
-
-    letter-spacing: 2px;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 960px) {
-  .header2 {
-    font-size: 80px;
-    color: #777;
-
-
-    /* padding-left: 30%; */
-    position: relative;
-  }
-
-  .players-padding {
-    padding-left: 30px;
-    padding-right: 307px;
-  }
-
-  .image2 {
-    position: absolute;
-    left: 200px;
-    top: 10px;
-    /* width: 300px; */
-    height: 100px;
-    width: 100%;
-
-    z-index: 1;
-  }
-
-  .h2_subtext {
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0;
-
-    padding-top: 13px;
-
-    letter-spacing: 2px;
-  }
-}
-
-.header3__part4 {
-  padding-top: 54px;
-}
-
-.header3__part5 {
-  padding-top: 110px;
-  padding-bottom: 53px;
-}
-
-.header3__part6 {
-  padding-top: 52px;
-  padding-bottom: 56px;;
-  background-color: #090c35;
-
-  color: #fff;
-}
-
-
-
-/* Можно нумератор стилизовать как-то более оптимально? --( */
 .enum-magenta {
   font-size: 14px;
   vertical-align: top;
@@ -444,7 +331,7 @@ p.h3__text__part3 {
 .enum-magenta::after {
   content: "";
   display: block;
-  width: 15px;
+  width: 25px;
   height: 3px;
   background-color: #ffffff;
 
@@ -453,10 +340,274 @@ p.h3__text__part3 {
   left: 0;
 }
 
+
+@media (max-width: 640px) {
+  .athlets-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .athlets-title {
+    padding-top: 25px;
+
+    font-size: 50px;
+    color: #e7e7e7;
+  }
+
+  .athlets-item:nth-child(2) {
+    /* отступ для картинки */
+    padding-top: 330px;
+  }
+
+  .athlets-item {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .athlets-item:nth-child(3) {
+    /* ?? */
+    background-color: #f6f4fa;
+  }
+
+  .athlets-item:last-child {
+    background-color: #5e42b0;
+    color: #ffffff;
+  }
+
+  .athlets-item__title {
+    padding-left: 10px;
+    font-size: 23px;
+    color: #c1c1c1;
+  }
+
+  .athlets-item__text {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+
+  .enum {
+    font-size: 14px;
+    line-height: 35px;
+  }
+
+  .enum::after {
+    width: 15px;
+  }
+
+  .enum-magenta {
+    font-size: 14px;
+    line-height: 35px;
+  }
+
+  .enum-magenta::after {
+    width: 15px;
+  }
+
+  .image1 {
+    position: absolute;
+    left: -5%;
+    top: 80%;
+    /* width: 300px; */
+    height: 330px;
+    width: 100%;
+
+    z-index: 1;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .athlets-padding {
+    padding-left: 280px;
+  }
+
+  .athlets-title {
+    padding-top: 85px;
+
+    font-size: 80px;
+    color: #e7e7e7;
+  }
+
+  .athlets-item {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .athlets-item:nth-child(3) {    
+    background-color: #f6f4fa;
+  }
+
+  .athlets-item:last-child {
+    background-color: #5e42b0;
+    color: #ffffff;
+  }
+
+  .athlets-item__title {
+    padding-left: 10px;
+    font-size: 36px;
+    color: #c1c1c1;
+  }
+
+  .athlets-item__text {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+
+  .enum {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .enum-magenta {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .image1 {
+    position: absolute;
+    left: -55%;
+    top: 10px;    
+    height: 1000px;
+    width: 100%;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: 961px) {
+  .athlets-padding {
+    padding-left: 53.2%;
+    padding-right: 10px;
+    padding-top: 0px;
+  }
+
+  .athlets-title {
+    padding-top: 115px;
+
+    font-size: 80px;
+    color: #e7e7e7;
+  }
+
+  .athlets-item {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .athlets-item:nth-child(3) {    
+    background-color: #f6f4fa;
+  }
+
+  .athlets-item:last-child {
+    background-color: #5e42b0;
+  }
+
+  .athlets-item__title {
+    padding-left: 10px;
+    font-size: 36px;
+    color: #c1c1c1;
+  }
+
+  .athlets-item__text {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+
+  .image1 {
+    position: absolute;
+    left: -25%;
+    top: 20px;    
+    height: 1000px;
+    width: 100%;
+
+    z-index: 1;
+  }
+}
+
+/* -------------PLAYERS------ */
+.image2 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.players-section > .athlets-item:nth-child(4)  {
+  background-color: #090c35;
+}
+
+.players-section > .athlets-item:nth-child(4) > .athlets-item__text  {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .players-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 0%;
+    top: 50px;
+    height: 330px;
+    width: 300px;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .players-padding {
+    padding-left: 30px;
+    padding-right: 307px;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 45%;
+    top: -100px;
+    height: 1000px;
+    width: 100%;
+
+    z-index: 1;
+
+    background-position: center center;
+  }
+}
+
+@media (min-width: 961px) {
+  .players-padding {
+    padding-left: 10px;
+    padding-right: 50%;
+  }
+
+  .image2 {
+    position: absolute;
+    left: 40%;
+    top: 20px;
+    width: 100%;
+    height: 900px;    
+    z-index: 1;
+  }
+}
+
+
 /*-------------------- BE ACTIVE----------------*/
 
 .be-active-padding {
   padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .image3 {
@@ -466,9 +617,9 @@ p.h3__text__part3 {
 
   padding-bottom: 109%;
   position: relative;
+
+  box-sizing: border-box;
 }
-/* корректно ли сверстан элемент? Паддинги опять приходится подбирать */
-/* не знаю как сделать подчеркивание */
 
 .image4 {
   background-position: center center;
@@ -477,8 +628,7 @@ p.h3__text__part3 {
 
   padding-bottom: 109%;
   position: relative;
-
-  margin-top: 75px;
+  box-sizing: border-box;
 }
 
 .image5 {
@@ -489,18 +639,42 @@ p.h3__text__part3 {
   padding-bottom: 109%;
   position: relative;
 
-  margin-top: 60px;
-}
-
-h2.header2_part2 {
-  /* font-size: 28px; */
-  padding-top: 24px;
-  color: #e7e7e7;
-
-  margin: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 640px) {
+  .be-active-section {
+    display: block;
+  }  
+
+  .be-active-info {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 80px;
+  }  
+
+  .be-active-info__title {
+    font-size: 28px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #e7e7e7;
+  }
+
+  .be-active-info__text {
+    margin: 0;
+    padding-top: 25px;
+
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  .be-active-block__image {
+    padding-bottom: 350px;
+  }
+
+
   .image3::after {
     position: absolute;
     background-color: #8765dd;
@@ -513,11 +687,13 @@ h2.header2_part2 {
 
     left: 6.25%;
     top: 84%;
-    width: 21.875%;
     padding-top: 6%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 70px;
+    height: 70px;
   }
 
   .image4::after {
@@ -532,11 +708,13 @@ h2.header2_part2 {
 
     left: 6.25%;
     top: 85%;
-    width: 21.875%;
     padding-top: 5.5%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 70px;
+    height: 70px;
   }
 
   .image5::after {
@@ -551,15 +729,49 @@ h2.header2_part2 {
 
     left: 6.25%;
     top: 85%;
-    width: 21.875%;
     padding-top: 5.5%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 70px;
+    height: 70px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
+
+  .be-active-section {
+    display: block;
+  }  
+
+  .be-active-info {
+    padding-top: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+  }  
+
+  .be-active-info__title {
+    font-size: 80px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #e7e7e7;
+  }
+
+  .be-active-info__text {
+    margin: 0;
+    padding-top: 35px;
+
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+
+  .be-active-block__image {
+    padding-bottom: 730px;
+  }
+
   .image3::after {
     position: absolute;
     background-color: #8765dd;
@@ -576,7 +788,7 @@ h2.header2_part2 {
     padding-top: 6%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .image4::after {
@@ -595,7 +807,7 @@ h2.header2_part2 {
     padding-top: 5.5%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .image5::after {
@@ -614,35 +826,131 @@ h2.header2_part2 {
     padding-top: 5.5%;
     padding-bottom: 8%;
 
-    font-size: 1.5rem;
-  }
-
-  h2.header2_part2 {
-    /* font-size: 28px; */
-    padding-top: 80px;
-    color: #e7e7e7;
-
-    margin: 0;
+    font-size: 24px;
   }
 }
 
+@media (min-width: 961px) {
+
+  .be-active-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .be-active-block {
+    width: 50%;
+    height: 730px;
+  }
+
+  .be-active-info {
+    padding-left: 130px;
+    padding-right: 10px;
+
+    padding-top: 260px;
+  }
+
+  .be-active-block:nth-child(4)>.be-active-info {
+    padding-left: 10px;
+    padding-right: 130px;
+  }
+
+  .be-active-info__title {
+    font-size: 80px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #e7e7e7;
+  }
+
+  .be-active-info__text {
+    margin: 0;
+    padding-top: 120px;
+
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .be-active-block__image {
+    padding-bottom: 730px;
+  }
 
 
+  .image3::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
 
-.header3__part7 {
-  padding-top: 28px;
+    content: "01";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 91%;
+    top: 28.5%;
+    width: 17.5%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image4::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "02";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: -8%;
+    top: 28.5%;
+    width: 17.5%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .image5::after {
+    position: absolute;
+    background-color: #8765dd;
+    font-weight: 700;
+
+    content: "03";
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+
+    left: 91%;
+    top: 28.5%;
+    width: 17.5%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+
+    font-size: 1.5rem;
+  }
+
+  .be-active-block:nth-child(-n+2) {
+    order: -2;
+  }
+
+
+  .be-active-block:nth-child(4) {
+    order: -1;
+  }
+
+  .be-active-block:nth-child(n+5) {
+    order: 9;
+  }
 }
 
 /*--------------footer----------------------*/
 
 .footer {
-  /*background-image: url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/game_767.jpg?raw=true);*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  margin-top: 50px;
-
   position: relative;
 }
 
@@ -657,7 +965,7 @@ h2.header2_part2 {
   opacity: 0.80;
 }
 
-.footer__container {
+.footer-container {
   position: relative;
   z-index: 1;
 }
@@ -666,56 +974,97 @@ h2.header2_part2 {
   padding-top: 101px;
 }
 
-.button__footer {
+.footer-logo-title-container__logo {
   display: flex;
-
   background-color: #5e42b0;
-
   color: #fff;
+}
+
+.footer-logo-title-container__logo:hover {
+  background-color: #513a96;
+}
+
+.footer-title__download {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+.footer-logo-title-container__svg {
+  fill: #fff;
 
   margin-left: auto;
   margin-right: auto;
 }
 
-.h4 {
-  margin: 0;
-
-  padding-top: 48px;
-  font-size: 32px;
-  text-align: center;
-
-  color: #fff;
-
-  letter-spacing: 2px;
-}
-
-.h5 {
-  margin: 0;
-
-  padding-top: 2px;
-  font-size: 14px;
-  text-align: center;
-
-  color: #fff;
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-.button__appstore__footer {
-  margin-top: 70px;
-}
-
-.footer__logo__container {
-  margin-left:auto;
-  margin-right:auto;
-  width: 41%;
-  fill: #ffffff;
-
-  margin-top: 79px;
-  padding-bottom: 10px;
-}
-
 @media (max-width: 640px) {
+  .footer-logo-title-container {
+    padding-top: 100px;
+    display: block;
+  }
+
+  .footer-logo-title-container__logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-logo-title-container__svg {
+    width: 60px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+
+  .footer-title {
+    padding-top: 57px;
+    padding-left: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .footer-title__download {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .footer-title__show {
+    padding-top: 10px;
+    padding-left: 10px;
+
+    font-size: 14px;
+    color: #a496ca;
+
+    font-weight: 400;
+  }
+
+  .footer-buttons-wrap {
+    padding-top: 150px;
+    width: 85%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-lower-logo {
+    margin-left:auto;
+    margin-right:auto;
+    fill: #ffffff;
+
+    width: 195px;
+    padding-top: 260px;
+    padding-bottom: 50px;
+  }
+
+
   .button__footer {
     width: 21.875%;
     border-radius: 15px;
@@ -733,25 +1082,134 @@ h2.header2_part2 {
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  .button__footer {
-    width: 130px;
-    border-radius: 30px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .footer-logo-title-container {
+    padding-top: 125px;
+    display: block;
   }
 
-  .footer-logo {
-    width: 70px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    fill: #fff;
+  .footer-logo-title-container__logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
 
     margin-left: auto;
     margin-right: auto;
   }
 
+  .footer-logo-title-container__svg {
+    width: 90px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+
+  .footer-title {
+    padding-top: 80px;
+    padding-left: 15px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .footer-title__download {
+    font-size: 80px;
+    line-height: 60px;
+    letter-spacing: 2px;
+  }
+
+  .footer-title__show {
+    padding-top: 10px;
+    padding-left: 10px;
+
+    font-size: 30px;
+    line-height: 35px;
+    color: #a496ca;
+
+    font-weight: 400;
+  }
+
+  .footer-buttons-wrap {
+    padding-top: 150px;
+    width: 85%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-lower-logo {
+    margin-left:auto;
+    margin-right:auto;
+    fill: #ffffff;
+
+    width: 195px;
+    padding-top: 260px;
+    padding-bottom: 50px;
+  }
+
 }
+
+@media (min-width: 961px) {
+  .footer-logo-title-container {
+    padding-top: 230px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo-title-container__logo {
+    width: 130px;
+    border-radius: 30px;
+  }
+
+  .footer-logo-title-container__svg {
+    width: 70px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+  }
+
+  .footer-title {
+    padding-left: 15px;
+  }
+
+  .footer-title__download {
+    font-size: 80px;
+    line-height: 60px;
+    letter-spacing: 2px;
+  }
+
+  .footer-title__show {
+    padding-top: 10px;
+    padding-left: 10px;
+
+    font-size: 30px;
+    line-height: 35px;
+    color: #a496ca;
+
+    font-weight: 400;
+  }
+
+  .footer-buttons-wrap {
+    padding-top: 150px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-lower-logo {
+    margin-left:auto;
+    margin-right:auto;
+    fill: #ffffff;
+
+    width: 195px;
+    padding-top: 260px;
+    padding-bottom: 50px;
+  }
+}
+
  /* ----------IMAGES -------------------- */
 
 @media (max-width: 640px) {
@@ -773,7 +1231,6 @@ h2.header2_part2 {
   }
 
   .image3 {
-    /*background-image: url( https://github.com/lubavin01/mq-diploma/blob/master/sources/img/be-active.jpg?raw=true);*/ /*768*/
     background-image: url(img/be-active_640.jpg);
   }
 
@@ -788,23 +1245,10 @@ h2.header2_part2 {
   .footer {
     background-image: url(img/game_767.jpg);
   }
-
-  body::after {
-    content: url(sources/surface_320.jpg);
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.4;
-    pointer-events: none;
-    z-index: 99;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  h1 {
-    /*font-size: 28px;*/
+  h1 {   
     font-size: 4rem;
     letter-spacing: 1px;
   }
@@ -820,12 +1264,11 @@ h2.header2_part2 {
   }
 
   .image2 {
-    background-image: url(img/basketballer_436.png);
+    background-image: url(img/basketballer_991.png);
   }
 
   .image3 {
-    /*background-image: url( https://github.com/lubavin01/mq-diploma/blob/master/sources/img/be-active.jpg?raw=true);*/ /*768*/
-    background-image: url(img/be-active.jpg); /*768*/
+    background-image: url(img/be-active.jpg);
   }
 
   .image4 {
@@ -839,18 +1282,7 @@ h2.header2_part2 {
   .footer {
     background-image: url(img/game_767.jpg);
   }
-
-  body::after {
-    /* content: url(sources/surface_768.jpg); */
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.4;
-    pointer-events: none;
-    z-index: 99;
-  }
+  
 }
 
 @media (min-width: 961px) {
@@ -869,7 +1301,6 @@ h2.header2_part2 {
   }
 
   .image3 {
-    /*background-image: url( https://github.com/lubavin01/mq-diploma/blob/master/sources/img/be-active.jpg?raw=true);*/ /*768*/
     background-image: url(img/be-active_960.jpg); /*768*/
   }
 
@@ -885,14 +1316,14 @@ h2.header2_part2 {
     background-image: url(img/game_1280.jpg);
   }
 
-  body::after {
-    content: url(sources/surface_desktop.jpg);
+/* -----------Overlay------------- */
 
+  body::after {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0.4;
+    opacity: 0.3;
     pointer-events: none;
     z-index: 99;
   }
@@ -900,14 +1331,14 @@ h2.header2_part2 {
 
  @font-face {
    font-family: "Open Sans";
-   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+   src: url("https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2");
    font-weight: 400;
    font-style: normal;
  }
 
  @font-face {
    font-family: "Open Sans";
-   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+   src: url("https://fonts.gstatic.com/s/opensans/v17/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2");
    font-weight: 700;
    font-style: normal;
  }
